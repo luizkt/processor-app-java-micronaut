@@ -23,7 +23,7 @@
     <micronaut.aot.enabled>true</micronaut.aot.enabled>
     <micronaut.aot.packageName>br.com.lkt.aot.generated</micronaut.aot.packageName>
     <micronaut.data.version>3.9.6</micronaut.data.version>
-    <exec.mainClass>br.com.lkt.Application</exec.mainClass>
+    <exec.mainClass>br.com.lkt.ProcessorApplication</exec.mainClass>
   </properties>
 
   <repositories>
@@ -57,6 +57,11 @@
     <dependency>
       <groupId>io.micronaut</groupId>
       <artifactId>micronaut-jackson-databind</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.micronaut.serde</groupId>
+      <artifactId>micronaut-serde-jackson</artifactId>
       <scope>compile</scope>
     </dependency>
     <dependency>
@@ -121,6 +126,16 @@
       <groupId>org.mockito</groupId>
       <artifactId>mockito-core</artifactId>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat.embed</groupId>
+      <artifactId>tomcat-embed-core</artifactId>
+      <version>9.0.39</version>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
 
